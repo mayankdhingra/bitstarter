@@ -3,12 +3,8 @@ var app = express();
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-fs.readFileSync('./index.html',function read(err, data){
-	if (err) {
-		throw err;
-	}
-	content = data;
-	response.send(content);
+var text = fs.readFileSync('./index.html','utf-8'){
+	response.send(text);
 
 ) 
 });
